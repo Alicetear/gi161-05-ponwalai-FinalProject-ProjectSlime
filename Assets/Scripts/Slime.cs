@@ -1,16 +1,23 @@
+using System;
 using UnityEngine;
 
-public class Slime : MonoBehaviour
+public class Slime : Character
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Awake()
     {
-        
+        base.Awake();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        // ?????? Input
+        movement.x = Input.GetAxisRaw("Horizontal");  // A / D
+        movement.y = Input.GetAxisRaw("Vertical");    // W / S
+        movement.Normalize(); 
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
     }
 }
