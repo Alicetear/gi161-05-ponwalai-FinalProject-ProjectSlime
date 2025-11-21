@@ -7,6 +7,7 @@ public abstract class Character : MonoBehaviour
     protected Rigidbody2D rb;
     protected Vector2 movement;
 
+    
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
