@@ -53,5 +53,8 @@ TagManager:
   - name: Walk behind
     uniqueID: 2303922093
     locked: 0
+  - name: Decor
+    uniqueID: 1171414317
+    locked: 0
   m_RenderingLayers:
   - Default
