@@ -9,9 +9,10 @@ public class MapTransation : MonoBehaviour
     [SerializeField] CinemachineConfiner2D confiner;
     [SerializeField] string nextSceneName;
     [SerializeField] Direction direction;  
+    [SerializeField] Transform teleportTargetPosition;  
     [SerializeField] float additivePos = 2f;
 
-    enum Direction { up, down, Left, Right }
+    enum Direction { up, down, Left, Right, Teleport }
 
     [System.Obsolete]
     private void Awake()
@@ -40,6 +41,12 @@ public class MapTransation : MonoBehaviour
 
     private void UpdatePlayerPosition(GameObject player)
     {
+        if (direction == Direction.Teleport) 
+        {
+            player.transform.position = teleportTargetPosition.position;
+
+            return;
+        }
         Vector3 newPos = player.transform.position;
 
         switch (direction) 
