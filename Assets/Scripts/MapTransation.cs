@@ -51,10 +51,10 @@ public class MapTransation : MonoBehaviour
                 newPos.y -= additivePos;
                 break;
             case Direction.Left:
-                newPos.x += additivePos;
+                newPos.x -= additivePos;
                 break;
             case Direction.Right:
-                newPos.x -= additivePos;
+                newPos.x += additivePos;
                 break;
         }
 
