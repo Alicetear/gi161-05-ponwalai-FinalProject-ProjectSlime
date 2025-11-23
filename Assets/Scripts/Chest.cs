@@ -7,12 +7,11 @@ public class Chest : MonoBehaviour, IInteractable
     public GameObject itemPrefab;
     public Sprite openedSprite;
 
-
-    void Start()
+    private void Start()
     {
-        ChestID ??= GlobalHelper.GenerateUniqueID(gameObject);
+        IsOpened = false;
+        ChestID = GlobalHelper.GenerateUniqueID(gameObject);
     }
-
 
     public bool CanInteract()
     {
@@ -21,7 +20,9 @@ public class Chest : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (!CanInteract()) return;  //openChest
+        if (!CanInteract()) return;
+
+        OpenChest();
     }
 
     private void OpenChest()
@@ -30,23 +31,18 @@ public class Chest : MonoBehaviour, IInteractable
 
         if (itemPrefab)
         {
-            GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.down, Quaternion.identity);
-            droppedItem.GetComponent<BounceEffect>().StartNounce();
+            GameObject drop = Instantiate(itemPrefab,transform.position + Vector3.down * 0.4f,Quaternion.identity);
         }
-
     }
 
-    public void SetOpened(bool opened)
+    private void SetOpened(bool opened)
     {
-        if (IsOpened = opened)
+        IsOpened = opened;
+
+        if (opened)
         {
-            GetComponent<SpriteRanderer>().sprite = openedSprite;
+            GetComponent<SpriteRenderer>().sprite = openedSprite;
         }
-
-
-
-
-
     }
 
 
