@@ -1,8 +1,19 @@
 using System;
 using UnityEngine;
 
-public class Slime : Character
+public class Slime : Character 
 {
+     [field: SerializeField] public GameObject Bullet { get; set; }
+    [field: SerializeField] public Transform ShootPoint { get; set; }
+    public float ReloadTime { get; set; }
+    public float WaitTime { get; set; }
+
+    protected override void Start()
+    {
+        base.Start();   
+    }
+
+
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
     protected override void Awake()
@@ -13,21 +24,7 @@ public class Slime : Character
 
     }
 
-    private void Update()
-    {
 
-        movement.x = Input.GetAxisRaw("Horizontal");  // A / D
-        movement.y = Input.GetAxisRaw("Vertical");    // W / S
-
-        myAnimator.SetFloat("moveX" ,movement.x);
-        myAnimator.SetFloat("moveY" ,movement.y);
-        movement.Normalize(); 
-    }
-
-    private void FixedUpdate()
-    {
-        Move();
-    }
 
     private void AdjustPlayerFacingDirection()
     {
@@ -47,5 +44,29 @@ public class Slime : Character
 
 
 
+
+
+    private void Update()
+    {
+
+        movement.x = Input.GetAxisRaw("Horizontal");  // A / D
+        movement.y = Input.GetAxisRaw("Vertical");    // W / S
+
+        myAnimator.SetFloat("moveX" ,movement.x);
+        myAnimator.SetFloat("moveY" ,movement.y);
+        movement.Normalize();
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            TakeDamage(10);
+        }
+    }
+
+
+
+    private void FixedUpdate()
+    {
+        Move();
+    }
 
 }

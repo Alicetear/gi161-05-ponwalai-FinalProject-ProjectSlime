@@ -4,6 +4,7 @@ public class Chest : MonoBehaviour, IInteractable
 {
     public bool IsOpened { get; private set; }
     public string ChestID { get; private set; }
+
     public GameObject itemPrefab;
     public Sprite openedSprite;
 
