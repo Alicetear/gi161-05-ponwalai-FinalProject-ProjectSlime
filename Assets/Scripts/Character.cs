@@ -9,6 +9,7 @@ public abstract class Character : MonoBehaviour
     protected Rigidbody2D rb;
     protected Vector2 movement;
     public int Health { get; private set; }
+    
 
 
 

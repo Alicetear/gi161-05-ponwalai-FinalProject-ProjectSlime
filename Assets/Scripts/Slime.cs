@@ -1,27 +1,22 @@
 using System;
 using UnityEngine;
 
-public class Slime : Character 
+public class Slime : Character
 {
-     [field: SerializeField] public GameObject Bullet { get; set; }
-    [field: SerializeField] public Transform ShootPoint { get; set; }
-    public float ReloadTime { get; set; }
-    public float WaitTime { get; set; }
-
+    [SerializeField] protected Transform weapon;
+    private Animator myAnimator;
+    private SpriteRenderer mySpriteRender;
     protected override void Start()
     {
         base.Start();   
     }
 
 
-    private Animator myAnimator;
-    private SpriteRenderer mySpriteRender;
     protected override void Awake()
     {
         base.Awake();
         myAnimator = GetComponent<Animator>();
         mySpriteRender = GetComponent<SpriteRenderer>();
-
     }
 
 
@@ -42,7 +37,7 @@ public class Slime : Character
     }
 
 
-
+    
 
 
 
@@ -56,12 +51,15 @@ public class Slime : Character
         myAnimator.SetFloat("moveY" ,movement.y);
         movement.Normalize();
 
+
         if (Input.GetKeyDown(KeyCode.K))
         {
             TakeDamage(10);
         }
-    }
+        
+        AdjustPlayerFacingDirection();
 
+    }
 
 
     private void FixedUpdate()
