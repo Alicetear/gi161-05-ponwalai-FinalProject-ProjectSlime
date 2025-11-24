@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
+    public static event Action OnPlayerDeath;
     [SerializeField] protected float moveSpeed = 5f;
     [SerializeField] protected int maxHp = 100;
     [SerializeField] protected HealthBar healthBar;
@@ -57,7 +59,13 @@ public abstract class Character : MonoBehaviour
             healthBar.SetHealth(Health);
         }
 
-        IsDead();
+        if (Health <= 0)
+        {
+            Health = 0;
+            IsDead();
+            Debug.Log("You're dead");
+            OnPlayerDeath?.Invoke();
+        }
     }
 
 

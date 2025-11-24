@@ -6,6 +6,8 @@ public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Slider slider;
 
+    public static Action OnPlayerDeath { get; internal set; }
+
     void Awake()
     {
         if (slider == null)

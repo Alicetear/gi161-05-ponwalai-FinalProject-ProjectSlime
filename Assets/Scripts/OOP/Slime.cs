@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Slime : Character
 {
-    [SerializeField] protected Transform weapon;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
     protected override void Start()
