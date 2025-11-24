@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class NextScene : MonoBehaviour
 {
     public float delay = 48.2f;     
-    public string nextSceneName = "Game";
+    public string nextSceneName = "Loading";
     public PlayableDirector director;
 
     [System.Obsolete]

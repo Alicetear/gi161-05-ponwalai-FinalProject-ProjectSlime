@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextScene
   delay: 48.2
-  nextSceneName: Game
+  nextSceneName: Loading
   director: {fileID: 769965548}
 --- !u!1 &106789556
 GameObject:
@@ -904,7 +904,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextScene
   delay: 48.2
-  nextSceneName: Game
+  nextSceneName: Loading
   director: {fileID: 769965548}
 --- !u!1 &785784874
 GameObject:
