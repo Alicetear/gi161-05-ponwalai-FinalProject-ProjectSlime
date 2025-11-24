@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NextScene
   delay: 48.2
   nextSceneName: Game
+  director: {fileID: 769965548}
 --- !u!1 &106789556
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +780,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 7cec5e5055816de46a57c42907b1afbb, type: 2}
   m_InitialState: 1
-  m_WrapMode: 0
+  m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -957,6 +958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NextScene
   delay: 48.2
   nextSceneName: Game
+  director: {fileID: 769965548}
 --- !u!1 &785784874
 GameObject:
   m_ObjectHideFlags: 0
