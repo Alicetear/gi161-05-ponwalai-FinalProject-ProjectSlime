@@ -36,4 +36,5 @@ public class HealthBar : MonoBehaviour
         slider.value = Mathf.Clamp(health, 0, (int)slider.maxValue);
     }
 
+
 }
