@@ -23,7 +23,7 @@ public abstract class Character : MonoBehaviour
     public void Intialize(int startHealth)
     {
         Health = startHealth;
-        Debug.Log($"{this.name} is initialed Health : {this.Health}");
+        Debug.Log($"{this.name} is initialed Health : {this.maxHp}");
 
         if (healthBar != null)
         {
