@@ -23,6 +23,23 @@ public class Inventory
 
     public bool HasKey() => CountItem<Key>() > 0;
 
+    public bool UseKey()
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i] is Key)
+            {
+                Debug.Log("Use Key Open Door");
+                items.RemoveAt(i);
+                return true;        
+            }
+        }
+
+        Debug.Log("Not key");
+        return false;              
+    }
+
+
     internal void AddItem(Key key)
     {
         throw new NotImplementedException();
