@@ -22,6 +22,23 @@ public class UIInventory : MonoBehaviour
             }
         }
 
-        Debug.Log("Inventory UI เต็มแล้ว!");
+        Debug.Log("Inventory UI Full!");
     }
+
+    public void RemoveKeyFromUI()
+    {
+        foreach (Image slot in slots)
+        {
+            if (slot.sprite == keyIcon)
+            {
+                slot.sprite = null;
+                slot.color = Color.gray; 
+                Debug.Log("Delete Key UI");
+                return;
+            }
+        }
+    }
+
+
+
 }

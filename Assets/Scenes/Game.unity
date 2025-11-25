@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 29501207}
   - component: {fileID: 29501209}
   - component: {fileID: 29501208}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Inventory (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.5176471, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10160,7 +10160,7 @@ GameObject:
   - component: {fileID: 277266081}
   - component: {fileID: 277266083}
   - component: {fileID: 277266082}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Inventory (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10199,7 +10199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.5176471, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10931,7 +10931,7 @@ GameObject:
   - component: {fileID: 464815246}
   - component: {fileID: 464815248}
   - component: {fileID: 464815247}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Inventory (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10970,7 +10970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.5176471, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -33919,7 +33919,7 @@ GameObject:
   - component: {fileID: 1247736369}
   - component: {fileID: 1247736372}
   - component: {fileID: 1247736371}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Inventory (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33958,7 +33958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.5188679, g: 0.51152545, b: 0.51152545, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -37643,7 +37643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867111097}
   - component: {fileID: 1867111098}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InventoryAll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37801,7 +37801,7 @@ GameObject:
   - component: {fileID: 1970372864}
   - component: {fileID: 1970372866}
   - component: {fileID: 1970372865}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Inventory (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37840,7 +37840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.5176471, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -130962,7 +130962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 947710281858560115, guid: 5b0ba93a0ed489545bb65e8e57912bcc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.32
+      value: -10.34
       objectReference: {fileID: 0}
     - target: {fileID: 947710281858560115, guid: 5b0ba93a0ed489545bb65e8e57912bcc, type: 3}
       propertyPath: m_LocalPosition.z

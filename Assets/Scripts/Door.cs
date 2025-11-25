@@ -5,6 +5,7 @@ public class Door : MonoBehaviour
 {
     private bool isOpened = false;
 
+    [Obsolete]
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Slime player = collision.GetComponentInParent<Slime>();
@@ -12,11 +13,17 @@ public class Door : MonoBehaviour
 
         if (player.Inventory.UseKey())
         {
+            UIInventory ui = FindObjectOfType<UIInventory>();
+            if (ui != null)
+            {
+                ui.RemoveKeyFromUI();
+            }
+
             OpenDoor();
         }
         else
         {
-            Debug.Log("??????????????????????????!");
+            Debug.Log("I Need a Key open Door");
         }
     }
 
@@ -24,7 +31,7 @@ public class Door : MonoBehaviour
     {
         if (isOpened) return; 
 
-        Debug.Log("?????????????!");
+        Debug.Log("Door Open!");
         isOpened = true;
 
         
