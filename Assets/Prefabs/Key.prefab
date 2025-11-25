@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8350406387649024921}
   - component: {fileID: 2573495767257830051}
   - component: {fileID: 650934369609071167}
-  - component: {fileID: 6061948539590300921}
+  - component: {fileID: 5514346054559439305}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.125, y: 2.0625}
   m_EdgeRadius: 0
---- !u!114 &6061948539590300921
+--- !u!114 &5514346054559439305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,8 +147,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6196639175845873296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6513b991b119d364981bed79d7a86a9c, type: 3}
+  m_Script: {fileID: 11500000, guid: b8fba74b4d6d4994da8385b89c344f90, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Chest
-  itemPrefab: {fileID: 0}
-  openedSprite: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::KeyPickup

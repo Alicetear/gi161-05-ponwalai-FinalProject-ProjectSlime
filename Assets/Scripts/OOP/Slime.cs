@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class Slime : Character
 {
+    public Inventory Inventory { get; private set; }
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
     protected override void Start()
     {
-        base.Start();   
+        base.Start();
+        Inventory = new Inventory();
     }
 
 
