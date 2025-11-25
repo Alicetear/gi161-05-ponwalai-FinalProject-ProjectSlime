@@ -8,12 +8,12 @@ public class UImanager : MonoBehaviour
 
     private void OnEnable()
     {
-        Character.OnPlayerDeath += EnableGameOverMenu;
+        Slime.OnPlayerDeath += EnableGameOverMenu;
     }
 
     private void OnDisable()
     {
-        Character.OnPlayerDeath -= EnableGameOverMenu;
+        Slime.OnPlayerDeath -= EnableGameOverMenu;
     }
 
 

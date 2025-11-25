@@ -3,24 +3,23 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    public static event Action OnPlayerDeath;
     [SerializeField] protected float moveSpeed = 5f;
     [SerializeField] protected int maxHp = 100;
     [SerializeField] protected HealthBar healthBar;
 
     protected Rigidbody2D rb;
     protected Vector2 movement;
-    public int Health { get; private set; }
-    
+    protected int currentHp;
 
-
-
-
+    public int Health;
 
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+
+
     public void Intialize(int startHealth)
     {
         Health = startHealth;
@@ -35,6 +34,7 @@ public abstract class Character : MonoBehaviour
 
     }
 
+
     protected virtual void Move()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
@@ -48,8 +48,7 @@ public abstract class Character : MonoBehaviour
 
 
 
-
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         Health -= damage;
         Debug.Log($"{this.name} took damage {damage} Current Health : {Health} ");
@@ -62,73 +61,14 @@ public abstract class Character : MonoBehaviour
         if (Health <= 0)
         {
             Health = 0;
-            IsDead();
-            Debug.Log("You're dead");
-            OnPlayerDeath?.Invoke();
+            Die();
         }
     }
 
 
-    public bool IsDead()
+    protected virtual void Die()
     {
-        if (Health <= 0)
-        {
-            Destroy(this.gameObject);
-            return true;
-        }
-        else { return false; }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

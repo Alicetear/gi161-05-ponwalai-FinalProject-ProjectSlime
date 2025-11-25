@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Slime : Character
 {
+    public static event Action OnPlayerDeath;
     public Inventory Inventory { get; private set; }
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
@@ -38,10 +39,6 @@ public class Slime : Character
     }
 
 
-    
-
-
-
     private void Update()
     {
 
@@ -66,6 +63,14 @@ public class Slime : Character
     private void FixedUpdate()
     {
         Move();
+    }
+
+    protected override void Die()
+    {
+        Debug.Log("Player died");
+        Destroy(gameObject);
+        OnPlayerDeath?.Invoke();
+        Time.timeScale = 0f;
     }
 
 }
