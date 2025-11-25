@@ -54,7 +54,7 @@ public class Slime : Character
         {
             TakeDamage(10);
         }
-        
+
         AdjustPlayerFacingDirection();
 
     }
