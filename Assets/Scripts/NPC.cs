@@ -19,12 +19,9 @@ public class NPC : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-            Debug.Log("Pressed F");
 
         if (Input.GetKeyDown(KeyCode.F) && playerIsClose)
         {
-            Debug.Log("F + Near NPC");
 
             if (!dialoguePanel.activeSelf)
                 StartDialogue();
@@ -83,11 +80,9 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger Enter: " + other.name);
 
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player is close = TRUE");
             playerIsClose = true;
         }
     }
@@ -96,7 +91,6 @@ public class NPC : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player left");
             playerIsClose = false;
             EndDialogue();
         }
