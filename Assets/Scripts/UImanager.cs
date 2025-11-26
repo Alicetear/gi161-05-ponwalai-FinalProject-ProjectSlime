@@ -16,6 +16,11 @@ public class UImanager : MonoBehaviour
         Slime.OnPlayerDeath -= EnableGameOverMenu;
     }
 
+    void Start()
+    {
+        Time.timeScale = 1f;
+        gameOverMenu.SetActive(false);
+    }
 
     public void EnableGameOverMenu()
     {
@@ -24,6 +29,7 @@ public class UImanager : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
