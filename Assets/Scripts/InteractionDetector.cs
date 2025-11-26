@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class InteractionDetector : MonoBehaviour
 {
-    private IInteractable interactableInRange = null;
+    private IInteractable interactableInRange;
     public GameObject interactionIcon;
 
     private void Start()
@@ -11,21 +11,12 @@ public class InteractionDetector : MonoBehaviour
         interactionIcon.SetActive(false);
     }
 
-    // botton E from Player Input System
-    public void OnInteract(InputAction.CallbackContext context)
-    {
-        if (!context.performed) return;
-
-
-        interactableInRange?.Interact();
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IInteractable interactable) && interactable.CanInteract())
+        if (collision.TryGetComponent(out IInteractable interactable))
         {
             interactableInRange = interactable;
-            interactionIcon.SetActive(true);
+            interactionIcon.SetActive(interactable.CanInteract());
         }
     }
 
@@ -39,16 +30,11 @@ public class InteractionDetector : MonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
-
-
-
+    public void OnInteract(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed) return;
+        interactableInRange?.Interact();
+    }
 
 
 }

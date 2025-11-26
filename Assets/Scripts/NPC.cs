@@ -1,91 +1,105 @@
+using JetBrains.Annotations;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour, IInteractable
+public class NPC : MonoBehaviour
 {
-    [Header("Dialogue Data")]
-    public NPCDialogue dialogueData;
-
-    [Header("UI References")]
     public GameObject dialoguePanel;
-    public TMP_Text dialogueText;
-    public TMP_Text nameText;
-    public Image portraitImage;
+    public Text dialogueText;
+    public string[] dialogue;
+    public GameObject contButton;
 
-    private int dialogueIndex;
-    private bool isTyping;
-    private bool isDialogueActive;
+    public float wordSpeed = 0.05f;
 
-    private float typingSpeed = 0.03f;
+    private bool playerIsClose = false;
+    private int index = 0;
+    private bool isTyping = false;
 
-    public bool CanInteract()
+    private void Update()
     {
-        return !isDialogueActive;
-    }
-    public void Interact()
-    {
-        if (dialoguePanel == null)
-            return;
+        if (Input.GetKeyDown(KeyCode.F))
+            Debug.Log("Pressed F");
 
-        if (PauseController.IsGamePaused)
-            return;
+        if (Input.GetKeyDown(KeyCode.F) && playerIsClose)
+        {
+            Debug.Log("F + Near NPC");
 
-        if (!isDialogueActive)
-        {
-            StartDialogue();
-        }
-        else
-        {
-            ShowNextSentence();
+            if (!dialoguePanel.activeSelf)
+                StartDialogue();
+            else
+                NextLine();
         }
     }
-
 
     private void StartDialogue()
     {
-        dialogueIndex = 0;
-        isDialogueActive = true;
+        index = 0;
         dialoguePanel.SetActive(true);
-
-        nameText.text = dialogueData.npcName;
-        portraitImage.sprite = dialogueData.portrait;
-
-        ShowNextSentence();
+        dialogueText.text = "";
+        StartCoroutine(Typing());
     }
 
-    private void ShowNextSentence()
-    {
-        if (dialogueIndex >= dialogueData.sentences.Length)
-        {
-            EndDialogue();
-            return;
-        }
-
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(dialogueData.sentences[dialogueIndex]));
-        dialogueIndex++;
-    }
-
-
-    private System.Collections.IEnumerator TypeSentence(string sentence)
+    IEnumerator Typing()
     {
         isTyping = true;
         dialogueText.text = "";
 
-        foreach (char letter in sentence)
+        foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(wordSpeed);
         }
 
         isTyping = false;
+        contButton.SetActive(true);
     }
 
-
-    public void EndDialogue()
+    public void NextLine()
     {
-        isDialogueActive = false;
+        contButton.SetActive(false);
+
+        if (index < dialogue.Length - 1)
+        {
+            index++;
+            dialogueText.text = "";
+            StartCoroutine(Typing());
+        }
+        else
+        {
+            EndDialogue();
+        }
+    }
+
+    void EndDialogue()
+    {
+        StopAllCoroutines();
         dialoguePanel.SetActive(false);
+        contButton.SetActive(false);
+        dialogueText.text = "";
+        index = 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Trigger Enter: " + other.name);
+
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player is close = TRUE");
+            playerIsClose = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player left");
+            playerIsClose = false;
+            EndDialogue();
+        }
     }
 }
+
