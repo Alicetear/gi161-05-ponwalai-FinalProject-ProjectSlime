@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6400854186938001762
+--- !u!1 &7508217522847416796
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7143707437740856410}
-  - component: {fileID: 3946359160376753916}
-  - component: {fileID: 1828810179457746073}
-  - component: {fileID: 2353046214536102758}
-  - component: {fileID: -1793252998922031887}
-  - component: {fileID: 4402404529017861870}
-  - component: {fileID: 1711818268050770722}
+  - component: {fileID: 6773081951906464591}
+  - component: {fileID: 2112225069278196245}
+  - component: {fileID: 5171524703222101277}
+  - component: {fileID: 5689615298656391657}
+  - component: {fileID: 4239649443772182410}
+  - component: {fileID: 4736935662452531668}
+  - component: {fileID: 4097721170280667950}
   m_Layer: 0
-  m_Name: Minotuar
+  m_Name: Ore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7143707437740856410
+--- !u!4 &6773081951906464591
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400854186938001762}
+  m_GameObject: {fileID: 7508217522847416796}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.47021, y: 50.90525, z: 0}
+  m_LocalPosition: {x: 25.35, y: -8.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3946359160376753916
+--- !u!212 &2112225069278196245
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400854186938001762}
+  m_GameObject: {fileID: 7508217522847416796}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -81,28 +81,28 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -493696145
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2991773290986861209, guid: 67e996c1b744f6e4dad271c9f00a0c7e, type: 3}
+  m_Sprite: {fileID: -6979224055594033102, guid: b4761100a9787f448b696ff2546c2f32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 2.25, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &1828810179457746073
+--- !u!50 &5171524703222101277
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400854186938001762}
+  m_GameObject: {fileID: 7508217522847416796}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -122,13 +122,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &2353046214536102758
+--- !u!58 &5689615298656391657
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400854186938001762}
+  m_GameObject: {fileID: 7508217522847416796}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -158,20 +158,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!82 &-1793252998922031887
+--- !u!82 &4239649443772182410
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400854186938001762}
+  m_GameObject: {fileID: 7508217522847416796}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.583
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -255,37 +255,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4402404529017861870
+--- !u!114 &4736935662452531668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400854186938001762}
+  m_GameObject: {fileID: 7508217522847416796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3160d460fd1912479ac318cbdb26821, type: 3}
+  m_Script: {fileID: 11500000, guid: a45233a67fc223e4d91d33ec1a2a964a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Minotaur
+  m_EditorClassIdentifier: Assembly-CSharp::Ore
   moveSpeed: 5
-  maxHp: 100
+  maxHp: 80
   healthBar: {fileID: 0}
   Health: 0
   attackCooldown: 1
-  damage: 15
+  damage: 10
   chaseRange: 5
   attackRange: 1
---- !u!114 &1711818268050770722
+--- !u!114 &4097721170280667950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400854186938001762}
+  m_GameObject: {fileID: 7508217522847416796}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a21b849782c0f94ebe6c86b3d549bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterSound
-  audioSource: {fileID: -1793252998922031887}
-  proximitySound: {fileID: 8300000, guid: f7d9ec4e2709df344b6aaa98f919a6f2, type: 3}
+  audioSource: {fileID: 4239649443772182410}
+  proximitySound: {fileID: 8300000, guid: 2246a04d834157840a4890727a1ad03b, type: 3}

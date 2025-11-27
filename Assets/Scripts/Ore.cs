@@ -1,19 +1,19 @@
 using UnityEngine;
 
-public class Minotaur : Enemy
+public class Ore : Enemy
 {
     protected override void Start()
     {
         base.Start();
-        Intialize(100);
-        chaseRange = 15f;
-        attackRange = 3f;
+        Intialize(80);
+        chaseRange = 10f;
+        attackRange = 2f;
 
     }
 
     protected override void Attack()
     {
         base.Attack();
-        Debug.Log("Minotaur Attack Player");
+        Debug.Log("Ore Attack Player");
     }
 }
