@@ -44870,7 +44870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a523ef6d1aa2bc49aa7db367c4bb6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slime
-  moveSpeed: 3.5
+  moveSpeed: 3
   maxHp: 100
   healthBar: {fileID: 298322735}
   Health: 0
