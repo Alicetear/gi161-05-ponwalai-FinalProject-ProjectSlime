@@ -5,6 +5,8 @@ public class Slime : Character
 {
     public static event Action OnPlayerDeath;
     public Inventory Inventory { get; private set; }
+    public int MaxHealth { get; private set; }
+
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
     protected override void Start()
@@ -54,7 +56,6 @@ public class Slime : Character
         {
             TakeDamage(10);
         }
-
         AdjustPlayerFacingDirection();
 
     }
@@ -71,6 +72,13 @@ public class Slime : Character
         Destroy(gameObject);
         OnPlayerDeath?.Invoke();
         Time.timeScale = 0f;
+    }
+
+    public void Heal(int amount)
+    {
+        Health += amount;
+        if (Health > MaxHealth)
+            Health = MaxHealth;
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,7 @@ public class UIInventory : MonoBehaviour
         Debug.Log("Inventory UI Full!");
     }
 
+
     public void RemoveKeyFromUI()
     {
         foreach (Image slot in slots)
@@ -38,7 +40,6 @@ public class UIInventory : MonoBehaviour
             }
         }
     }
-
 
 
 }
