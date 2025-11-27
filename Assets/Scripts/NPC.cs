@@ -15,7 +15,7 @@ public class NPC : MonoBehaviour
 
     private bool playerIsClose = false;
     private int index = 0;
-    private bool isTyping = false;
+    public bool isTyping = false;
 
     private void Update()
     {

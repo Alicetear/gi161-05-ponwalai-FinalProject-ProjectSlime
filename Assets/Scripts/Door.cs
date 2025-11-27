@@ -29,23 +29,24 @@ public class Door : MonoBehaviour
 
     private void OpenDoor()
     {
-        if (isOpened) return; 
+        if (isOpened) return;
 
         Debug.Log("Door Open!");
         isOpened = true;
 
-        
+
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
         {
             col.enabled = false;
         }
 
-        
+
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null)
         {
             sr.enabled = false;
         }
-    }
+
+    } 
 }
